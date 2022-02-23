@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="787.0" prefWidth="1278.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Teacher">
+   <children>
+      <SplitPane dividerPositions="0.7628458498023716" prefHeight="796.0" prefWidth="1278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="801.0" prefWidth="414.0">
+               <children>
+                  <TabPane layoutY="-1.0" prefHeight="786.0" prefWidth="992.0" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab text="查看学生问卷信息">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="25.0" prefHeight="42.0" prefWidth="220.0" text="请输入你想查看的学生学号">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="up_w" layoutX="492.0" layoutY="31.0" mnemonicParsing="false" onAction="#toup_w" text="选择" />
+                                    <Button fx:id="select_w" layoutX="911.0" layoutY="31.0" mnemonicParsing="false" onAction="#toselect_w" text="查询" />
+                                    <TextField fx:id="sno_w" layoutX="258.0" layoutY="31.0" />
+                                    <Label fx:id="w1" layoutX="31.0" layoutY="86.0" prefHeight="32.0" prefWidth="889.0" />
+                                    <Label fx:id="a1" layoutX="31.0" layoutY="128.0" prefHeight="32.0" prefWidth="889.0" />
+                                    <Label fx:id="w2" layoutX="31.0" layoutY="170.0" prefHeight="35.0" prefWidth="889.0" />
+                                    <Label fx:id="a2" layoutX="31.0" layoutY="217.0" prefHeight="32.0" prefWidth="889.0" />
+                                    <Label fx:id="w3" layoutX="31.0" layoutY="259.0" prefHeight="32.0" prefWidth="889.0" />
+                                    <Label fx:id="a3" layoutX="31.0" layoutY="302.0" prefHeight="32.0" prefWidth="889.0" />
+                                    <Label fx:id="w4" layoutX="31.0" layoutY="342.0" prefHeight="32.0" prefWidth="889.0" />
+                                    <Label fx:id="a4" layoutX="31.0" layoutY="385.0" prefHeight="32.0" prefWidth="889.0" />
+                                    <Label fx:id="w5" layoutX="31.0" layoutY="425.0" prefHeight="32.0" prefWidth="889.0" />
+                                    <Label fx:id="a5" layoutX="31.0" layoutY="465.0" prefHeight="32.0" prefWidth="889.0" />
+                                    <Label layoutX="576.0" layoutY="32.0" text="请选择问卷号">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="wno" layoutX="725.0" layoutY="31.0" prefWidth="150.0" />
+                                    <ScrollPane layoutX="31.0" layoutY="573.0" prefHeight="146.0" prefWidth="685.0">
+                                       <content>
+                                          <TextArea fx:id="evalute_w" prefHeight="200.0" prefWidth="688.0" />
+                                       </content>
+                                    </ScrollPane>
+                                    <Label layoutX="24.0" layoutY="527.0" prefHeight="20.0" prefWidth="312.0" text="请输入您的评价">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="778.0" layoutY="527.0" prefHeight="21.0" prefWidth="166.0" text="请输入分数">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="score_w" layoutX="748.0" layoutY="573.0" />
+                                    <Button fx:id="submit_w" layoutX="791.0" layoutY="646.0" mnemonicParsing="false" onAction="#tosubmit_w" prefHeight="46.0" prefWidth="117.0" text="提交" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="查看学生提问">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="32.0" layoutY="20.0" prefHeight="42.0" prefWidth="220.0" text="请选择你想查看的问题">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="question1" layoutX="265.0" layoutY="26.0" prefWidth="150.0" />
+                                    <Button fx:id="up_b" layoutX="506.0" layoutY="26.0" mnemonicParsing="false" onAction="#up2" text="更新" />
+                                    <Button fx:id="select_b" layoutX="591.0" layoutY="26.0" mnemonicParsing="false" onAction="#select2" text="查询" />
+                                    <Label layoutX="32.0" layoutY="93.0" prefHeight="32.0" prefWidth="210.0" text="学生学号">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="sno2" alignment="CENTER" layoutX="121.0" layoutY="98.0" prefHeight="23.0" prefWidth="202.0" />
+                                    <Label layoutX="369.0" layoutY="93.0" prefHeight="32.0" prefWidth="153.0" text="发布时间">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="time2" alignment="CENTER" layoutX="483.0" layoutY="98.0" prefHeight="23.0" prefWidth="266.0" />
+                                    <Button fx:id="submit_b" layoutX="666.0" layoutY="26.0" mnemonicParsing="false" onAction="#submit" text="回复" />
+                                    <Label layoutX="32.0" layoutY="154.0" prefHeight="32.0" prefWidth="210.0" text="问题内容">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <ScrollPane layoutX="32.0" layoutY="192.0" prefHeight="222.0" prefWidth="877.0">
+                                       <content>
+                                          <Label fx:id="question2" alignment="TOP_LEFT" prefHeight="226.0" prefWidth="878.0" />
+                                       </content>
+                                    </ScrollPane>
+                                    <Label layoutX="32.0" layoutY="430.0" prefHeight="32.0" prefWidth="210.0" text="回答内容">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <ScrollPane layoutX="32.0" layoutY="479.0" prefHeight="219.0" prefWidth="883.0">
+                                       <content>
+                                          <TextArea fx:id="answer2" prefHeight="235.0" prefWidth="896.0" />
+                                       </content>
+                                    </ScrollPane>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="查看学生评价">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="751.0" prefWidth="961.0">
+                                       <children>
+                                          <Label layoutX="32.0" layoutY="20.0" prefHeight="42.0" prefWidth="220.0" text="请选择你想查看的评价">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="evalute" layoutX="265.0" layoutY="26.0" prefWidth="150.0" />
+                                          <Button fx:id="update3" layoutX="506.0" layoutY="26.0" mnemonicParsing="false" onAction="#toup3" text="更新" />
+                                          <Button fx:id="select3" layoutX="591.0" layoutY="26.0" mnemonicParsing="false" onAction="#toselect3" text="查询" />
+                                          <Label layoutX="32.0" layoutY="93.0" prefHeight="32.0" prefWidth="210.0" text="学生学号">
+                                             <font>
+                                                <Font size="19.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="sno3" alignment="CENTER" layoutX="121.0" layoutY="98.0" prefHeight="23.0" prefWidth="202.0" />
+                                          <Label layoutX="415.0" layoutY="95.0" prefHeight="32.0" prefWidth="153.0" text="发布时间">
+                                             <font>
+                                                <Font size="19.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="stime3" alignment="CENTER" layoutX="556.0" layoutY="100.0" prefHeight="23.0" prefWidth="266.0" />
+                                          <Label layoutX="32.0" layoutY="154.0" prefHeight="32.0" prefWidth="210.0" text="评价内容">
+                                             <font>
+                                                <Font size="19.0" />
+                                             </font>
+                                          </Label>
+                                          <ScrollPane layoutX="32.0" layoutY="192.0" prefHeight="544.0" prefWidth="909.0">
+                                             <content>
+                                                <Label fx:id="evalute3" alignment="TOP_LEFT" prefHeight="520.0" prefWidth="910.0" />
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="779.0" prefWidth="267.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="19.0" layoutY="81.0" prefHeight="32.0" prefWidth="87.0" text="姓     名" />
+                  <Label fx:id="name" alignment="CENTER" layoutX="115.0" layoutY="81.0" prefHeight="32.0" prefWidth="174.0" />
+                  <Label alignment="CENTER" layoutX="15.0" layoutY="121.0" prefHeight="32.0" prefWidth="94.0" text="工     号" />
+                  <Label fx:id="sno" alignment="CENTER" layoutX="115.0" layoutY="117.0" prefHeight="40.0" prefWidth="174.0" />
+                  <Label alignment="CENTER" layoutX="18.0" layoutY="165.0" prefHeight="32.0" prefWidth="94.0" text="出 生 日 期" />
+                  <Label fx:id="birth" alignment="CENTER" layoutX="115.0" layoutY="165.0" prefHeight="32.0" prefWidth="174.0" />
+                  <Label alignment="CENTER" layoutX="15.0" layoutY="207.0" prefHeight="40.0" prefWidth="94.0" text="电       话" />
+                  <TextField fx:id="phone" alignment="CENTER" layoutX="115.0" layoutY="211.0" prefHeight="32.0" prefWidth="174.0" />
+                  <Label alignment="CENTER" layoutX="8.0" layoutY="255.0" prefHeight="40.0" prefWidth="108.0" text="所在学院" />
+                  <Label fx:id="sept" alignment="CENTER" layoutX="115.0" layoutY="255.0" prefHeight="40.0" prefWidth="174.0" />
+                  <Label alignment="CENTER" layoutX="8.0" layoutY="295.0" prefHeight="46.0" prefWidth="108.0" text="电子邮箱" />
+                  <Label alignment="CENTER" layoutX="8.0" layoutY="341.0" prefHeight="42.0" prefWidth="108.0" text="工作时间" />
+                  <Button fx:id="update" layoutX="173.0" layoutY="464.0" mnemonicParsing="false" onAction="#get_inf" prefHeight="32.0" prefWidth="94.0" text="更新" />
+                  <Button fx:id="fix" layoutX="29.0" layoutY="464.0" mnemonicParsing="false" onAction="#fixed" prefHeight="32.0" prefWidth="94.0" text="修改" />
+                  <Label alignment="CENTER" layoutX="29.0" layoutY="25.0" prefHeight="35.0" prefWidth="238.0" text="教师个人信息">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mail" alignment="CENTER" layoutX="115.0" layoutY="302.0" prefHeight="32.0" prefWidth="174.0" />
+                  <TextField fx:id="worktime" alignment="CENTER" layoutX="20.0" layoutY="383.0" prefHeight="58.0" prefWidth="259.0" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="787.0" prefWidth="1278.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Manger">
+   <children>
+      <TabPane layoutX="57.0" layoutY="23.0" prefHeight="787.0" prefWidth="1278.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="学 生 管 理">
+               <content>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="修改学生信息">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="36.0" layoutY="38.0" prefHeight="34.0" prefWidth="193.0" text="请输入想要修改学生的学号" />
+                                    <TextField fx:id="sno_fix" alignment="CENTER" layoutX="258.0" layoutY="40.0" />
+                                    <Button fx:id="select1" layoutX="522.0" layoutY="40.0" mnemonicParsing="false" onAction="#selectstudentinfo" text="查询" />
+                                    <Label layoutX="36.0" layoutY="111.0" prefHeight="34.0" prefWidth="193.0" text="学     号" />
+                                    <Label layoutX="460.0" layoutY="113.0" prefHeight="34.0" prefWidth="193.0" text="姓   名" />
+                                    <TextField fx:id="student_name" alignment="CENTER" layoutX="565.0" layoutY="115.0" />
+                                    <Label fx:id="sno" layoutX="133.0" layoutY="111.0" prefHeight="34.0" prefWidth="289.0" />
+                                    <Label layoutX="36.0" layoutY="171.0" prefHeight="34.0" prefWidth="193.0" text="生     日" />
+                                    <TextField fx:id="student_birth" alignment="CENTER" layoutX="134.0" layoutY="173.0" prefHeight="30.0" prefWidth="289.0" />
+                                    <Label layoutX="522.0" layoutY="171.0" prefHeight="34.0" prefWidth="193.0" text="电    话" />
+                                    <TextField fx:id="student_phone" alignment="CENTER" layoutX="666.0" layoutY="173.0" prefHeight="30.0" prefWidth="353.0" />
+                                    <Label layoutX="36.0" layoutY="233.0" prefHeight="34.0" prefWidth="193.0" text="学院专业" />
+                                    <TextField fx:id="student_sept" alignment="CENTER" layoutX="134.0" layoutY="235.0" prefHeight="30.0" prefWidth="289.0" />
+                                    <Label layoutX="522.0" layoutY="233.0" prefHeight="34.0" prefWidth="193.0" text="年   级" />
+                                    <TextField fx:id="student_grade" alignment="CENTER" layoutX="666.0" layoutY="235.0" prefHeight="30.0" prefWidth="353.0" />
+                                    <Label layoutX="38.0" layoutY="293.0" prefHeight="34.0" prefWidth="193.0" text="辅导员" />
+                                    <TextField fx:id="student_teacher" alignment="CENTER" layoutX="133.0" layoutY="295.0" prefHeight="30.0" prefWidth="289.0" />
+                                    <Label layoutX="38.0" layoutY="355.0" prefHeight="34.0" prefWidth="193.0" text="密     码" />
+                                    <TextField fx:id="student_password" alignment="CENTER" layoutX="164.0" layoutY="355.0" prefHeight="30.0" prefWidth="795.0" />
+                                    <Button fx:id="fix1" layoutX="632.0" layoutY="40.0" mnemonicParsing="false" onAction="#fixstudentinfo" text="修改" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                      <Tab text="删 除 学 生">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="delete1" layoutX="990.0" layoutY="278.0" mnemonicParsing="false" onAction="#delete_student" prefHeight="77.0" prefWidth="194.0" text="删除" />
+                                    <Label layoutX="241.0" layoutY="40.0" prefHeight="123.0" prefWidth="728.0" text="请输入你想删除学生的学号">
+                                       <font>
+                                          <Font size="60.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sno_delet" alignment="CENTER" layoutX="264.0" layoutY="278.0" prefHeight="80.0" prefWidth="628.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="新 增 学 生">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane prefHeight="709.0" prefWidth="1278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label layoutX="325.0" layoutY="21.0" prefHeight="42.0" prefWidth="656.0" text="请输入想要添加学生的信息">
+                                             <font>
+                                                <Font size="45.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="sno_app" alignment="CENTER" layoutX="130.0" layoutY="113.0" prefHeight="30.0" prefWidth="294.0" />
+                                          <Label layoutX="36.0" layoutY="111.0" prefHeight="34.0" prefWidth="193.0" text="学     号" />
+                                          <Label layoutX="460.0" layoutY="113.0" prefHeight="34.0" prefWidth="193.0" text="姓   名" />
+                                          <TextField fx:id="sname_app" alignment="CENTER" layoutX="565.0" layoutY="115.0" />
+                                          <Label layoutX="36.0" layoutY="171.0" prefHeight="34.0" prefWidth="193.0" text="生     日" />
+                                          <TextField fx:id="sbirth_app" alignment="CENTER" layoutX="134.0" layoutY="173.0" prefHeight="30.0" prefWidth="289.0" />
+                                          <Label layoutX="522.0" layoutY="171.0" prefHeight="34.0" prefWidth="193.0" text="电    话" />
+                                          <TextField fx:id="sphone_app" alignment="CENTER" layoutX="666.0" layoutY="173.0" prefHeight="30.0" prefWidth="353.0" />
+                                          <Label layoutX="36.0" layoutY="233.0" prefHeight="34.0" prefWidth="193.0" text="学院专业" />
+                                          <TextField fx:id="ssept_app" alignment="CENTER" layoutX="134.0" layoutY="235.0" prefHeight="30.0" prefWidth="289.0" />
+                                          <Label layoutX="522.0" layoutY="233.0" prefHeight="34.0" prefWidth="193.0" text="年   级" />
+                                          <TextField fx:id="sgrade_app" alignment="CENTER" layoutX="666.0" layoutY="235.0" prefHeight="30.0" prefWidth="353.0" />
+                                          <Label layoutX="38.0" layoutY="293.0" prefHeight="34.0" prefWidth="193.0" text="辅导员" />
+                                          <TextField fx:id="steacher_app" alignment="CENTER" layoutX="133.0" layoutY="295.0" prefHeight="30.0" prefWidth="289.0" />
+                                          <Label layoutX="38.0" layoutY="355.0" prefHeight="34.0" prefWidth="193.0" text="密     码" />
+                                          <TextField fx:id="spassword_app" alignment="CENTER" layoutX="164.0" layoutY="355.0" prefHeight="30.0" prefWidth="795.0" />
+                                          <Button fx:id="sapp" layoutX="452.0" layoutY="464.0" mnemonicParsing="false" onAction="#sappend" prefHeight="66.0" prefWidth="315.0" text="添      加" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+            </Tab>
+          <Tab text="教 师 管 理">
+               <content>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="修改教师信息">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane prefHeight="709.0" prefWidth="1278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label layoutX="36.0" layoutY="38.0" prefHeight="34.0" prefWidth="193.0" text="请输入想要修改教师的工号" />
+                                          <TextField fx:id="tno_fix" alignment="CENTER" layoutX="258.0" layoutY="40.0" />
+                                          <Button fx:id="select2" layoutX="522.0" layoutY="40.0" mnemonicParsing="false" onAction="#selecttno" text="查询" />
+                                          <Label layoutX="36.0" layoutY="111.0" prefHeight="34.0" prefWidth="193.0" text="工     号" />
+                                          <Label layoutX="460.0" layoutY="113.0" prefHeight="34.0" prefWidth="193.0" text="姓   名" />
+                                          <TextField fx:id="tnamefix" alignment="CENTER" layoutX="565.0" layoutY="115.0" />
+                                          <Label fx:id="tnofix" layoutX="133.0" layoutY="111.0" prefHeight="34.0" prefWidth="289.0" />
+                                          <Label layoutX="36.0" layoutY="171.0" prefHeight="34.0" prefWidth="193.0" text="生     日" />
+                                          <TextField fx:id="tbirthfix" alignment="CENTER" layoutX="134.0" layoutY="173.0" prefHeight="30.0" prefWidth="289.0" />
+                                          <Label layoutX="522.0" layoutY="171.0" prefHeight="34.0" prefWidth="193.0" text="电    话" />
+                                          <TextField fx:id="tphonefix" alignment="CENTER" layoutX="666.0" layoutY="173.0" prefHeight="30.0" prefWidth="353.0" />
+                                          <Label layoutX="36.0" layoutY="233.0" prefHeight="34.0" prefWidth="193.0" text="所属学院" />
+                                          <TextField fx:id="tseptfix" alignment="CENTER" layoutX="134.0" layoutY="235.0" prefHeight="30.0" prefWidth="289.0" />
+                                          <Label layoutX="522.0" layoutY="233.0" prefHeight="34.0" prefWidth="193.0" text="邮   箱" />
+                                          <TextField fx:id="tmailfix" alignment="CENTER" layoutX="666.0" layoutY="235.0" prefHeight="30.0" prefWidth="353.0" />
+                                          <Label layoutX="38.0" layoutY="293.0" prefHeight="34.0" prefWidth="193.0" text="工作时间" />
+                                          <TextField fx:id="ttimefix" alignment="CENTER" layoutX="133.0" layoutY="295.0" prefHeight="30.0" prefWidth="825.0" />
+                                          <Label layoutX="38.0" layoutY="355.0" prefHeight="34.0" prefWidth="193.0" text="密     码" />
+                                          <TextField fx:id="tpassfix" alignment="CENTER" layoutX="164.0" layoutY="355.0" prefHeight="30.0" prefWidth="795.0" />
+                                          <Button fx:id="fix2" layoutX="632.0" layoutY="40.0" mnemonicParsing="false" onAction="#fixtno" text="修改" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                      <Tab text="添 加 教 师">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane prefHeight="709.0" prefWidth="1278.0">
+                                       <children>
+                                          <Label layoutX="394.0" layoutY="34.0" prefHeight="34.0" prefWidth="642.0" text="请输入想要添加教师的信息">
+                                             <font>
+                                                <Font size="38.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="tnoapp" alignment="CENTER" layoutX="135.0" layoutY="113.0" prefHeight="30.0" prefWidth="290.0" />
+                                          <Label layoutX="36.0" layoutY="111.0" prefHeight="34.0" prefWidth="193.0" text="工     号" />
+                                          <Label layoutX="460.0" layoutY="113.0" prefHeight="34.0" prefWidth="193.0" text="姓   名" />
+                                          <TextField fx:id="tnameapp" alignment="CENTER" layoutX="565.0" layoutY="115.0" />
+                                          <Label layoutX="36.0" layoutY="171.0" prefHeight="34.0" prefWidth="193.0" text="生     日" />
+                                          <TextField fx:id="tbirthapp" alignment="CENTER" layoutX="134.0" layoutY="173.0" prefHeight="30.0" prefWidth="289.0" />
+                                          <Label layoutX="522.0" layoutY="171.0" prefHeight="34.0" prefWidth="193.0" text="电    话" />
+                                          <TextField fx:id="tphoneapp" alignment="CENTER" layoutX="666.0" layoutY="173.0" prefHeight="30.0" prefWidth="353.0" />
+                                          <Label layoutX="36.0" layoutY="233.0" prefHeight="34.0" prefWidth="193.0" text="所属学院" />
+                                          <TextField fx:id="tseptapp" alignment="CENTER" layoutX="134.0" layoutY="235.0" prefHeight="30.0" prefWidth="289.0" />
+                                          <Label layoutX="522.0" layoutY="233.0" prefHeight="34.0" prefWidth="193.0" text="邮   箱" />
+                                          <TextField fx:id="tmailapp" alignment="CENTER" layoutX="666.0" layoutY="235.0" prefHeight="30.0" prefWidth="353.0" />
+                                          <Label layoutX="38.0" layoutY="293.0" prefHeight="34.0" prefWidth="193.0" text="工作时间" />
+                                          <TextField fx:id="ttimeapp" alignment="CENTER" layoutX="133.0" layoutY="295.0" prefHeight="30.0" prefWidth="825.0" />
+                                          <Label layoutX="38.0" layoutY="355.0" prefHeight="34.0" prefWidth="193.0" text="密     码" />
+                                          <TextField fx:id="tpassapp" alignment="CENTER" layoutX="164.0" layoutY="355.0" prefHeight="30.0" prefWidth="795.0" />
+                                          <Button fx:id="tapp" layoutX="478.0" layoutY="454.0" mnemonicParsing="false" onAction="#tappend" prefHeight="73.0" prefWidth="282.0" text="添         加" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="删 除 教 师">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane layoutX="149.0" layoutY="134.0" prefHeight="709.0" prefWidth="1278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <AnchorPane prefHeight="709.0" prefWidth="1278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Button fx:id="delete2" layoutX="990.0" layoutY="278.0" mnemonicParsing="false" onAction="#deletetno" prefHeight="77.0" prefWidth="194.0" text="删除" />
+                                                <Label layoutX="241.0" layoutY="40.0" prefHeight="123.0" prefWidth="728.0" text="请输入你想删除教师的工号">
+                                                   <font>
+                                                      <Font size="60.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tnodelete" alignment="CENTER" layoutX="264.0" layoutY="278.0" prefHeight="80.0" prefWidth="628.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

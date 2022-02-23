@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="796.0" prefWidth="1267.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Student">
+   <children>
+      <SplitPane dividerPositions="0.7628458498023716" layoutX="-6.0" prefHeight="796.0" prefWidth="1279.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="801.0" prefWidth="414.0">
+               <children>
+                  <TabPane layoutY="1.0" prefHeight="784.0" prefWidth="993.0" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab text="问 题 咨 询">
+                           <content>
+                              <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab text="问题发布">
+                                       <content>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="713.0" prefWidth="961.0">
+                                                   <children>
+                                                      <ComboBox fx:id="select" layoutX="215.0" layoutY="12.0" prefWidth="150.0" visibleRowCount="20" />
+                                                      <Label layoutX="14.0" layoutY="15.0" prefHeight="24.0" prefWidth="201.0" text="请选择你想咨询的老师">
+                                                         <font>
+                                                            <Font size="19.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <CheckBox fx:id="annoy" layoutX="380.0" layoutY="17.0" mnemonicParsing="false" onAction="#isannoy" text="是否匿名" />
+                                                      <Button fx:id="submit" layoutX="479.0" layoutY="12.0" mnemonicParsing="false" onAction="#tosubmit" text="提交" />
+                                                      <ScrollPane layoutY="54.0" prefHeight="701.0" prefWidth="961.0">
+                                                         <content>
+                                                            <TextArea fx:id="question" prefHeight="681.0" prefWidth="956.0" promptText="请输入你想咨询的问题" />
+                                                         </content>
+                                                      </ScrollPane>
+                                                      <Button fx:id="tup" layoutX="544.0" layoutY="12.0" mnemonicParsing="false" onAction="#up" text="更新" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab text="查看问题">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <ScrollPane prefHeight="830.0" prefWidth="961.0" AnchorPane.bottomAnchor="-123.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <content>
+                                                      <AnchorPane prefHeight="795.0" prefWidth="961.0">
+                                                         <children>
+                                                            <Button layoutX="626.0" layoutY="28.0" mnemonicParsing="false" onAction="#delete" text="删除" />
+                                                            <Label layoutX="39.0" layoutY="27.0" prefHeight="32.0" prefWidth="174.0" text="请选择你的问题编号">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <ComboBox fx:id="questionid" layoutX="254.0" layoutY="28.0" prefWidth="150.0" />
+                                                            <ScrollPane layoutX="50.0" layoutY="119.0" prefHeight="237.0" prefWidth="859.0">
+                                                               <content>
+                                                                  <Label fx:id="ques" alignment="TOP_LEFT" prefHeight="233.0" prefWidth="863.0" />
+                                                               </content>
+                                                            </ScrollPane>
+                                                            <Label layoutX="54.0" layoutY="70.0" prefHeight="32.0" prefWidth="229.0" text="问题内容">
+                                                               <font>
+                                                                  <Font size="29.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="50.0" layoutY="362.0" prefHeight="32.0" prefWidth="229.0" text="老师回答">
+                                                               <font>
+                                                                  <Font size="29.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <ScrollPane layoutX="50.0" layoutY="408.0" prefHeight="225.0" prefWidth="861.0">
+                                                               <content>
+                                                                  <Label fx:id="anser" alignment="TOP_LEFT" prefHeight="248.0" prefWidth="876.0" />
+                                                               </content>
+                                                            </ScrollPane>
+                                                            <Label fx:id="ansername" layoutX="254.0" layoutY="363.0" prefHeight="35.0" prefWidth="189.0" />
+                                                            <Label fx:id="ansertime" layoutX="512.0" layoutY="364.0" prefHeight="35.0" prefWidth="189.0" />
+                                                            <Label fx:id="asktime" layoutX="196.0" layoutY="72.0" prefHeight="35.0" prefWidth="189.0" />
+                                                            <Label fx:id="evatime" layoutX="581.0" layoutY="73.0" prefHeight="32.0" prefWidth="174.0" />
+                                                            <Button layoutX="546.0" layoutY="28.0" mnemonicParsing="false" onAction="#tofind" text="查询" />
+                                                            <Button layoutX="705.0" layoutY="28.0" mnemonicParsing="false" onAction="#getnew" text="更新" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </Tab>
+                                </tabs>
+                              </TabPane>
+                           </content>
+                        </Tab>
+                        <Tab text="问 卷 填 写">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="submit_w" layoutX="558.0" layoutY="26.0" mnemonicParsing="false" onAction="#tosubmit_w" text="提交" />
+                                    <Label fx:id="w1" layoutX="23.0" layoutY="75.0" prefHeight="38.0" prefWidth="902.0" />
+                                    <RadioButton fx:id="a1" layoutX="23.0" layoutY="125.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="group1" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="b1" layoutX="257.0" layoutY="125.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0" toggleGroup="$group1" />
+                                    <RadioButton fx:id="c1" layoutX="474.0" layoutY="125.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0" toggleGroup="$group1" />
+                                    <RadioButton fx:id="d1" layoutX="698.0" layoutY="125.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="269.0" toggleGroup="$group1" />
+                                    <Label fx:id="w2" layoutX="23.0" layoutY="171.0" prefHeight="38.0" prefWidth="902.0" />
+                                    <Label fx:id="w3" layoutX="23.0" layoutY="260.0" prefHeight="38.0" prefWidth="902.0" />
+                                    <Label fx:id="w4" layoutX="23.0" layoutY="366.0" prefHeight="38.0" prefWidth="902.0" />
+                                    <Label fx:id="w5" layoutX="23.0" layoutY="465.0" prefHeight="38.0" prefWidth="902.0" />
+                                    <RadioButton fx:id="a2" layoutX="23.0" layoutY="217.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="group2" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="b2" layoutX="257.0" layoutY="217.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0" toggleGroup="$group2" />
+                                    <RadioButton fx:id="c2" layoutX="474.0" layoutY="217.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0" toggleGroup="$group2" />
+                                    <RadioButton fx:id="d2" layoutX="698.0" layoutY="217.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0" toggleGroup="$group2" />
+                                    <RadioButton fx:id="a3" layoutX="23.0" layoutY="310.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="group3" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="b3" layoutX="257.0" layoutY="310.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0" toggleGroup="$group3" />
+                                    <RadioButton fx:id="c3" layoutX="474.0" layoutY="310.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0" toggleGroup="$group3" />
+                                    <RadioButton fx:id="d3" layoutX="698.0" layoutY="310.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0" toggleGroup="$group3" />
+                                    <RadioButton fx:id="a4" layoutX="23.0" layoutY="422.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="group4" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="b4" layoutX="257.0" layoutY="422.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0" toggleGroup="$group4" />
+                                    <RadioButton fx:id="c4" layoutX="474.0" layoutY="422.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0" toggleGroup="$group4" />
+                                    <RadioButton fx:id="d4" layoutX="698.0" layoutY="422.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0" toggleGroup="$group4" />
+                                    <RadioButton fx:id="a5" layoutX="23.0" layoutY="521.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="group5" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="b5" layoutX="257.0" layoutY="521.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0" toggleGroup="$group5" />
+                                    <RadioButton fx:id="c5" layoutX="474.0" layoutY="521.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0" toggleGroup="$group5" />
+                                    <RadioButton fx:id="d5" layoutX="698.0" layoutY="521.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="265.0" toggleGroup="$group5" />
+                                    <Button fx:id="update_w" layoutX="670.0" layoutY="26.0" mnemonicParsing="false" onAction="#toupdate_w" text="更新" />
+                                    <ComboBox fx:id="index" layoutX="257.0" layoutY="26.0" prefWidth="150.0" />
+                                    <Label layoutX="38.0" layoutY="31.0" prefHeight="27.0" prefWidth="174.0" text="请选择问卷的类型">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="choice" layoutX="453.0" layoutY="26.0" mnemonicParsing="false" onAction="#tochoice" text="选择" />
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="评 价 老 师">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane layoutX="38.0" layoutY="35.0" prefHeight="746.0" prefWidth="961.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <ComboBox fx:id="select1" layoutX="246.0" layoutY="20.0" prefWidth="150.0" visibleRowCount="20" />
+                                          <CheckBox fx:id="annoy1" layoutX="457.0" layoutY="25.0" mnemonicParsing="false" onAction="#isannoy" text="是否匿名" />
+                                          <Button fx:id="submit1" layoutX="601.0" layoutY="21.0" mnemonicParsing="false" onAction="#tosubmit1" text="提交" />
+                                          <Button fx:id="tup1" layoutX="693.0" layoutY="21.0" mnemonicParsing="false" onAction="#up1" text="更新" />
+                                          <ScrollPane layoutY="61.0" prefHeight="698.0" prefWidth="970.0">
+                                             <content>
+                                                <TextArea fx:id="question1" prefHeight="681.0" prefWidth="956.0" promptText="请输入你想评价的内容" />
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="24.0" layoutY="25.0" prefHeight="24.0" prefWidth="201.0" text="请选择你想评价的老师">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="794.0" prefWidth="313.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="18.0" layoutY="67.0" prefHeight="32.0" prefWidth="87.0" text="姓      名" />
+                  <Label fx:id="name" alignment="CENTER" layoutX="115.0" layoutY="67.0" prefHeight="32.0" prefWidth="174.0" />
+                  <Label alignment="CENTER" layoutX="15.0" layoutY="121.0" prefHeight="32.0" prefWidth="94.0" text="学      号" />
+                  <Label fx:id="sno" alignment="CENTER" layoutX="115.0" layoutY="117.0" prefHeight="40.0" prefWidth="174.0" />
+                  <Label alignment="CENTER" layoutX="15.0" layoutY="173.0" prefHeight="32.0" prefWidth="94.0" text="出 生 日 期" />
+                  <Label fx:id="birth" alignment="CENTER" layoutX="115.0" layoutY="173.0" prefHeight="32.0" prefWidth="174.0" />
+                  <Label alignment="CENTER" layoutX="15.0" layoutY="215.0" prefHeight="40.0" prefWidth="94.0" text="电       话" />
+                  <TextField fx:id="phone" alignment="CENTER" layoutX="115.0" layoutY="219.0" prefHeight="32.0" prefWidth="174.0" />
+                  <Label alignment="CENTER" layoutX="8.0" layoutY="255.0" prefHeight="40.0" prefWidth="108.0" text="所在学院" />
+                  <Label fx:id="sept" alignment="CENTER" layoutX="115.0" layoutY="255.0" prefHeight="40.0" prefWidth="174.0" />
+                  <Label alignment="CENTER" layoutX="8.0" layoutY="295.0" prefHeight="46.0" prefWidth="108.0" text="所在年级" />
+                  <Label fx:id="grade" alignment="CENTER" layoutX="115.0" layoutY="299.0" prefHeight="38.0" prefWidth="174.0" />
+                  <Button fx:id="update" layoutX="48.0" layoutY="715.0" mnemonicParsing="false" onAction="#get_inf" prefHeight="46.0" prefWidth="201.0" text="更新" />
+                  <Button fx:id="fix" layoutX="54.0" layoutY="383.0" mnemonicParsing="false" onAction="#fixed" prefHeight="46.0" prefWidth="189.0" text="修改" />
+                  <Label alignment="CENTER" layoutX="29.0" layoutY="25.0" prefHeight="35.0" prefWidth="238.0" text="学生个人信息">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="29.0" layoutY="458.0" prefHeight="35.0" prefWidth="238.0" text="辅导员个人信息">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="15.0" layoutY="521.0" prefHeight="32.0" prefWidth="94.0" text="工  号" />
+                  <Label alignment="CENTER" layoutX="15.0" layoutY="563.0" prefHeight="32.0" prefWidth="94.0" text="姓  名" />
+                  <Label alignment="CENTER" layoutX="15.0" layoutY="599.0" prefHeight="32.0" prefWidth="94.0" text="所在学院" />
+                  <Label alignment="CENTER" layoutX="15.0" layoutY="635.0" prefHeight="32.0" prefWidth="94.0" text="手  机" />
+                  <Label alignment="CENTER" layoutX="15.0" layoutY="671.0" prefHeight="32.0" prefWidth="94.0" text="邮  箱" />
+                  <Label fx:id="Ino" alignment="CENTER" layoutX="115.0" layoutY="517.0" prefHeight="40.0" prefWidth="174.0" />
+                  <Label fx:id="iname" alignment="CENTER" layoutX="115.0" layoutY="559.0" prefHeight="40.0" prefWidth="174.0" />
+                  <Label fx:id="icollege" alignment="CENTER" layoutX="115.0" layoutY="595.0" prefHeight="40.0" prefWidth="174.0" />
+                  <Label fx:id="iphone" alignment="CENTER" layoutX="115.0" layoutY="631.0" prefHeight="40.0" prefWidth="174.0" />
+                  <Label fx:id="imail" alignment="CENTER" layoutX="106.0" layoutY="663.0" prefHeight="40.0" prefWidth="189.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Student_log">
+   <children>
+      <Label layoutX="67.0" layoutY="92.0" prefHeight="41.0" prefWidth="108.0" text="用 户 名">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="73.0" layoutY="195.0" prefHeight="41.0" prefWidth="84.0" text="密 码">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <TextField fx:id="user" layoutX="199.0" layoutY="97.0" onAction="#get_user" prefHeight="29.0" prefWidth="271.0" />
+      <Button fx:id="login" layoutX="232.0" layoutY="291.0" mnemonicParsing="false" onAction="#login_button" prefHeight="52.0" prefWidth="136.0" text="登录" />
+      <PasswordField fx:id="password" layoutX="199.0" layoutY="200.0" onAction="#get_password" prefHeight="30.0" prefWidth="271.0" />
+   </children>
+</AnchorPane>
